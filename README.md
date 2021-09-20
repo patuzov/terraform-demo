@@ -1,12 +1,9 @@
-# Terraform Basics
-* Create the *main.tf* file, define the [terraform block](https://www.terraform.io/docs/language/settings/index.html) and configure [azure provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs#example-usage)
-* Add the [Azure Resource Group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) resource
-* [Authenticate with Azure](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli) (`az login`)
-* [Initialize](https://www.terraform.io/docs/cli/commands/init.html) the working directory (`terraform init`)
-* Check the [execution plan](https://www.terraform.io/docs/cli/commands/plan.html) (`terraform plan`)
-* [Apply changes](https://www.terraform.io/docs/cli/commands/apply.html) (`terraform apply`)
-* Add a [storage account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) to the newly created resource group
-* Check the execution plan (`terraform plan`)
-  * Notice that the resource group remains unchanged
-* Apply changes (`terraform apply`)
-* [Optional] [Destroy](https://www.terraform.io/docs/cli/commands/destroy.html) created infrastructure (`terraform destroy`)
+# Backend
+* Create an Azure Storage resource [in the portal].
+* Create a container that will hold the remote state
+* Configure [azurerm backend](https://www.terraform.io/docs/language/settings/backends/azurerm.html)
+* Reinitialize the working directory (`terraform init`)
+  * CLI will ask whether existing state should be moved.
+  * Move existing state to remote backend (`yes`)
+* Run `terraform plan` to see that the state is in sync with the infrastrcutre
+* Add resources for an [Azure Function and its App Service Plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/function_app#example-usage-with-app-service-plan)
