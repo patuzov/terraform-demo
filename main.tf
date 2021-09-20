@@ -9,7 +9,7 @@ terraform {
   backend azurerm {
     resource_group_name  = "durable-rg"
     storage_account_name = "patuterraformbe"
-    container_name       = "boss"
+    container_name       = "demo"
     key                  = "tfstate"
   }
 }
