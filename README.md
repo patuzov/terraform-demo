@@ -34,3 +34,15 @@
     }
     ```
   * Configure instrumentation key's value in the *app* module as the output of the *monitoring* module
+
+## Reference git module
+* Change *monitoring* module source to `github.com/patuzov/terraform-demo-modules?ref=v1.0`
+  * Notice the release reference (v1.0)
+* Run `terraform init` to download module
+* Run `terraform plan` and see that the state is up to date with the infrastructure
+* Change module source to `github.com/patuzov/terraform-demo-modules?ref=v2.0`
+  * Notice the new release (v2.0) being referenced. It introduces a breaking change
+* Run `terraform init` to download new module version
+  * If you run `terraform plan` now you will get an error. The name of an input variable was changed
+* Change the resource group input variable name to *rg_name*
+* Run `terraform plan` and see that the state is up to date with the infrastructure

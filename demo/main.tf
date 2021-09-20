@@ -37,3 +37,10 @@ module "monitoring" {
   resource_group_name = azurerm_resource_group.demo.name
   location            = azurerm_resource_group.demo.location
 }
+
+// module "monitoring" {
+//   source = "github.com/patuzov/terraform-demo-modules?ref=v2.0"
+  
+//   rg_name  = azurerm_resource_group.demo.name
+//   location = azurerm_resource_group.demo.location
+// }
