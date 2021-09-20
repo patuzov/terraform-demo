@@ -5,4 +5,8 @@
 * [Initialize](https://www.terraform.io/docs/cli/commands/init.html) the working directory (`terraform init`)
 * Check the [execution plan](https://www.terraform.io/docs/cli/commands/plan.html) (`terraform plan`)
 * [Apply changes](https://www.terraform.io/docs/cli/commands/apply.html) (`terraform apply`)
+* Add a [storage account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) to the newly created resource group
+* Check the execution plan (`terraform plan`)
+  * Notice that the resource group remains unchanged
+* Apply changes (`terraform apply`)
 * [Optional] [Destroy](https://www.terraform.io/docs/cli/commands/destroy.html) created infrastructure (`terraform destroy`)
