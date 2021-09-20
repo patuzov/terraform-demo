@@ -19,7 +19,7 @@ provider azurerm {
 }
 
 resource "azurerm_resource_group" "demo" {
-  name     = "boss"
+  name     = "demo"
   location = "West Europe"
 }
 
@@ -32,7 +32,7 @@ resource "azurerm_storage_account" "demo" {
 }
 
 resource "azurerm_app_service_plan" "demo" {
-  name                = "boss-demo-azure-functions-service-plan"
+  name                = "demo-azure-functions-service-plan"
   location            = azurerm_resource_group.demo.location
   resource_group_name = azurerm_resource_group.demo.name
 
@@ -43,7 +43,7 @@ resource "azurerm_app_service_plan" "demo" {
 }
 
 resource "azurerm_function_app" "demo" {
-  name                       = "boss-demo-azure-function"
+  name                       = "demo-azure-function"
   location                   = azurerm_resource_group.demo.location
   resource_group_name        = azurerm_resource_group.demo.name
   app_service_plan_id        = azurerm_app_service_plan.demo.id
