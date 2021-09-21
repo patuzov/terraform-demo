@@ -7,3 +7,5 @@
   * Move existing state to remote backend (`yes`)
 * Run `terraform plan` to see that the state is in sync with the infrastrcutre
 * Add resources for an [Azure Function and its App Service Plan](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/function_app#example-usage-with-app-service-plan)
+* Apply changes (`terraform apply`)
+* [Optional] Destroy created infrastructure (`terraform destroy`)
